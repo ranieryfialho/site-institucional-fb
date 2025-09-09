@@ -1,0 +1,23 @@
+[
+  {
+    "name": "João Carlos P.",
+    "location": "Fortaleza, CE",
+    "text": "Fui muito bem atendido pelo Dr. Felipe. Ele resolveu uma dor no joelho que me acompanhava há anos. A abordagem minimamente invasiva fez toda a diferença na minha recuperação.",
+    "rating": 5,
+    "avatar": "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    "name": "Maria Eduarda S.",
+    "location": "Recife, PE",
+    "text": "Profissional extremamente competente e atencioso. Explicou cada detalhe do meu tratamento e me passou muita segurança. Recomendo de olhos fechados!",
+    "rating": 5,
+    "avatar": "https://i.pravatar.cc/150?img=2"
+  },
+  {
+    "name": "Ricardo Almeida",
+    "location": "São Paulo, SP",
+    "text": "Após o procedimento com o Dr. Felipe, voltei a praticar esportes sem dor. Agradeço imensamente por toda a dedicação e pelo resultado excelente.",
+    "rating": 5,
+    "avatar": "https://i.pravatar.cc/150?img=3"
+  }
+]
