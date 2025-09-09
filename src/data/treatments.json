@@ -1,0 +1,68 @@
+{
+  "categories": [
+    {
+      "id": "infiltracoes",
+      "title": "Infiltrações e Terapias Injetáveis",
+      "treatments": [
+        {
+          "name": "Ácido Hialurônico (Viscossuplementação)",
+          "description": "Lubrificação da articulação para alívio da dor e melhora da mobilidade em casos de artrose."
+        },
+        {
+          "name": "Bloqueio de Nervos Geniculares",
+          "description": "Procedimento minimamente invasivo para o alívio da dor crônica no joelho, bloqueando os nervos que transmitem a sensação de dor."
+        },
+        {
+          "name": "Terapias Ortobiológicas (BMA, PRP)",
+          "description": "Utilização de substâncias do próprio corpo do paciente para estimular a regeneração e cicatrização de tecidos."
+        }
+      ]
+    },
+    {
+      "id": "neuromodulacao",
+      "title": "Procedimentos de Neuromodulação",
+      "treatments": [
+        {
+          "name": "Radiofrequência",
+          "description": "Técnica que utiliza energia térmica para interromper os sinais de dor enviados por nervos específicos."
+        },
+        {
+          "name": "Crioablação",
+          "description": "Congelamento de nervos para um bloqueio duradouro da dor, ideal para casos crônicos e pós-cirúrgicos."
+        }
+      ]
+    },
+    {
+      "id": "terapias-fisicas",
+      "title": "Terapias com Meios Físicos",
+      "treatments": [
+        {
+          "name": "Laserterapia / Fotobiomodulação",
+          "description": "Aplicação de luz para reduzir a inflamação, aliviar a dor e acelerar a reparação tecidual em nível celular."
+        },
+        {
+          "name": "Terapia por Ondas de Choque",
+          "description": "Estímulo mecânico para promover a cicatrização em tendões, ligamentos e outros tecidos moles."
+        }
+      ]
+    },
+    {
+      "id": "cirurgias",
+      "title": "Cirurgias Ortopédicas",
+      "treatments": [
+        {
+          "name": "Artroscopia",
+          "description": "Cirurgia minimamente invasiva para diagnóstico e tratamento de lesões articulares, como menisco e ligamentos."
+        },
+        {
+          "name": "Osteotomias",
+          "description": "Correção do alinhamento ósseo para redistribuir a carga na articulação e aliviar a pressão em áreas desgastadas."
+        },
+        {
+          "name": "Cirurgias Patelofemorais",
+          "description": "Procedimentos focados em corrigir instabilidades e dores relacionadas à patela (rótula)."
+        }
+      ]
+    }
+  ]
+}
