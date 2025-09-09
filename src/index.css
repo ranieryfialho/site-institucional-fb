@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Nossas Cores Customizadas (Teal e Gold) */
+    --primary: 174 82% 38%; /* Teal: #11B3A3 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 38 92% 50%; /* Gold: #F59E0B */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Cores Neutras e Semânticas do Shadcn/ui */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 174 82% 38%; /* Teal para anel de foco */
+
+    /* Raio da Borda Padrão */
+    --radius: 0.75rem;
+  }
+
+  /* Definições para o modo escuro (se ativado no futuro) */
+  .dark {
+    /* Cores para o modo escuro podem ser definidas aqui */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Variáveis Auxiliares para o Carrossel (Embla) */
+.embla__slide {
+  --slides-per-view: 1; /* Padrão para mobile */
+}
+
+@media (min-width: 768px) { /* md */
+  .embla__slide {
+    --slides-per-view: 2;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .embla__slide {
+    --slides-per-view: 3;
+  }
+}
