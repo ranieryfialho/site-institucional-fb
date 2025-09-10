@@ -6,15 +6,37 @@
       "treatments": [
         {
           "name": "Ácido Hialurônico (Viscossuplementação)",
-          "description": "Lubrificação da articulação para alívio da dor e melhora da mobilidade em casos de artrose."
+          "description": "Lubrificação da articulação para alívio da dor e melhora da mobilidade em casos de artrose.",
+          "image": "/images/treatments/acido-hialuronico.jpg",
+          "benefits": ["No consultório", "Alívio em dias"],
+          "duration": "30 min",
+          "recovery": "Imediato"
         },
         {
           "name": "Bloqueio de Nervos Geniculares",
-          "description": "Procedimento minimamente invasivo para o alívio da dor crônica no joelho, bloqueando os nervos que transmitem a sensação de dor."
+          "description": "Procedimento minimamente invasivo para o alívio da dor crônica no joelho, bloqueando os nervos que transmitem a sensação de dor.",
+          "image": "/images/treatments/bloqueio-nervos.jpg",
+          "benefits": ["Alívio rápido", "Sem cirurgia"],
+          "duration": "45 min",
+          "recovery": "2-3 dias",
+          "location": "Centro cirúrgico",
+          "modalImage": "/images/treatments/bloqueio-nervos-modal.jpg",
+          "modalSubtitle": "Procedimento guiado por ultrassom para maior precisão",
+          "detailedDescription": "Técnica minimamente invasiva que bloqueia especificamente os nervos geniculares responsáveis pela transmissão da dor no joelho.",
+          "detailedBenefits": [
+            "Alívio rápido e eficaz da dor crônica",
+            "Procedimento ambulatorial sem necessidade de cirurgia",
+            "Mínima invasão com recuperação rápida"
+          ],
+          "howItWorks": "Utilizando guia por ultrassom, o médico localiza e bloqueia os nervos geniculares com anestésico local, interrompendo os sinais de dor enviados ao cérebro."
         },
         {
           "name": "Terapias Ortobiológicas (BMA, PRP)",
-          "description": "Utilização de substâncias do próprio corpo do paciente para estimular a regeneração e cicatrização de tecidos."
+          "description": "Utilização de substâncias do próprio corpo do paciente para estimular a regeneração e cicatrização de tecidos.",
+          "image": "/images/treatments/ortobiologicas.jpg",
+          "benefits": ["Material próprio", "Regenerativo"],
+          "duration": "90 min",
+          "recovery": "1-2 semanas"
         }
       ]
     },
@@ -24,11 +46,19 @@
       "treatments": [
         {
           "name": "Radiofrequência",
-          "description": "Técnica que utiliza energia térmica para interromper os sinais de dor enviados por nervos específicos."
+          "description": "Técnica que utiliza energia térmica para interromper os sinais de dor enviados por nervos específicos.",
+          "image": "/images/treatments/radiofrequencia.jpg",
+          "benefits": ["Efeito prolongado", "Não invasivo"],
+          "duration": "60 min",
+          "recovery": "1 semana"
         },
         {
           "name": "Crioablação",
-          "description": "Congelamento de nervos para um bloqueio duradouro da dor, ideal para casos crônicos e pós-cirúrgicos."
+          "description": "Congelamento de nervos para um bloqueio duradouro da dor, ideal para casos crônicos e pós-cirúrgicos.",
+          "image": "/images/treatments/crioablacao.jpg",
+          "benefits": ["Duradouro", "Casos crônicos"],
+          "duration": "45 min",
+          "recovery": "3-5 dias"
         }
       ]
     },
@@ -38,11 +68,19 @@
       "treatments": [
         {
           "name": "Laserterapia / Fotobiomodulação",
-          "description": "Aplicação de luz para reduzir a inflamação, aliviar a dor e acelerar a reparação tecidual em nível celular."
+          "description": "Aplicação de luz para reduzir a inflamação, aliviar a dor e acelerar a reparação tecidual em nível celular.",
+          "image": "/images/treatments/laserterapia.jpg",
+          "benefits": ["Não invasivo", "Celular"],
+          "duration": "20 min",
+          "recovery": "Imediato"
         },
         {
           "name": "Terapia por Ondas de Choque",
-          "description": "Estímulo mecânico para promover a cicatrização em tendões, ligamentos e outros tecidos moles."
+          "description": "Estímulo mecânico para promover a cicatrização em tendões, ligamentos e outros tecidos moles.",
+          "image": "/images/treatments/ondas-choque.jpg",
+          "benefits": ["Regenerativo", "Tecidos moles"],
+          "duration": "25 min",
+          "recovery": "1-2 dias"
         }
       ]
     },
@@ -52,15 +90,27 @@
       "treatments": [
         {
           "name": "Artroscopia",
-          "description": "Cirurgia minimamente invasiva para diagnóstico e tratamento de lesões articulares, como menisco e ligamentos."
+          "description": "Cirurgia minimamente invasiva para diagnóstico e tratamento de lesões articulares, como menisco e ligamentos.",
+          "image": "/images/treatments/artroscopia.jpg",
+          "benefits": ["Minimamente invasiva", "Recuperação rápida"],
+          "duration": "60-90 min",
+          "recovery": "2-4 semanas"
         },
         {
           "name": "Osteotomias",
-          "description": "Correção do alinhamento ósseo para redistribuir a carga na articulação e aliviar a pressão em áreas desgastadas."
+          "description": "Correção do alinhamento ósseo para redistribuir a carga na articulação e aliviar a pressão em áreas desgastadas.",
+          "image": "/images/treatments/osteotomias.jpg",
+          "benefits": ["Correção definitiva", "Redistribui carga"],
+          "duration": "90-120 min",
+          "recovery": "6-8 semanas"
         },
         {
           "name": "Cirurgias Patelofemorais",
-          "description": "Procedimentos focados em corrigir instabilidades e dores relacionadas à patela (rótula)."
+          "description": "Procedimentos focados em corrigir instabilidades e dores relacionadas à patela (rótula).",
+          "image": "/images/treatments/patelofemorais.jpg",
+          "benefits": ["Corrige instabilidade", "Específico patela"],
+          "duration": "60-90 min",
+          "recovery": "4-6 semanas"
         }
       ]
     }
