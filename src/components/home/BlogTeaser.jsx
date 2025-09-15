@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/ui/button';
 import blogPostsData from '@/data/blog-posts.json';
+import { Link } from 'react-router-dom';
 
 export function BlogTeaser() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -60,7 +61,7 @@ export function BlogTeaser() {
               {posts.map((post) => (
                 <div key={post.slug} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 pl-4">
                   <Card className="h-full flex flex-col overflow-hidden bg-white text-gray-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                    <a href={`/blog/${post.slug}`} className="block h-full">
+                    <Link to={`/blog/${post.slug}`} className="block h-full">
                       <img
                         src={post.image}
                         alt={post.title}
@@ -72,7 +73,7 @@ export function BlogTeaser() {
                         <p className="mt-3 text-base text-muted-foreground flex-grow">{post.excerpt}</p>
                         <p className="mt-4 font-semibold text-primary">Leia Mais →</p>
                       </CardContent>
-                    </a>
+                    </Link>
                   </Card>
                 </div>
               ))}
@@ -89,7 +90,9 @@ export function BlogTeaser() {
         </div>
         
         <div className="mt-16 text-center">
-            <Button size="lg" variant="outline" className="text-lg bg-transparent border-white text-white hover:bg-white hover:text-green-950">Ver Todos os Artigos</Button>
+            <Link to="/blog">
+              <Button size="lg" variant="outline" className="text-lg bg-transparent border-white text-white hover:bg-white hover:text-green-950">Ver Todos os Artigos</Button>
+            </Link>
         </div>
       </Container>
     </section>

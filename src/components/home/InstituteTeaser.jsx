@@ -1,12 +1,13 @@
 import { CheckCircle2 } from 'lucide-react';
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/ui/button';
+import fotoInstituto from '@/assets/images/dr-felipe-home.jpg';
+import { Link } from 'react-router-dom';
 
-// A lista de valores foi mantida, pois descreve os pilares da prática.
 const values = [
   {
     name: 'Atendimento Humanizado e Individual',
-    description: 'Cada paciente é único. Dedico meu tempo para ouvir e entender suas necessidades específicas.' // Ajustado para primeira pessoa
+    description: 'Cada paciente é único. Dedico meu tempo para ouvir e entender suas necessidades específicas.'
   },
   {
     name: 'Tecnologia de Vanguarda',
@@ -23,9 +24,12 @@ export function InstituteTeaser() {
     <section className="bg-white py-20 sm:py-28">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10 items-center">
-          {/* Coluna da Imagem */}
-          <div className="w-full h-80 lg:h-full bg-slate-200 rounded-2xl flex items-center justify-center">
-            <p className="text-slate-500">Foto do Instituto / Equipe</p>
+          <div className="w-full h-90 lg:h-full bg-slate-200 rounded-2xl overflow-hidden">
+            <img
+              src={fotoInstituto}
+              alt="Foto do Instituto FOT e sua equipe"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div>
@@ -48,7 +52,9 @@ export function InstituteTeaser() {
               ))}
             </dl>
             <div className="mt-10">
+              <Link to="/tratamentos">
                 <Button size="lg" className="bg-green-950 text-white hover:bg-green-900">Conheça a Estrutura</Button>
+              </Link>
             </div>
           </div>
         </div>

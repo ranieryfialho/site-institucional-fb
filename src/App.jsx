@@ -7,7 +7,8 @@ import { TratamentosPage } from './pages/TratamentosPage';
 import { ReabilitacaoPage } from './pages/ReabilitacaoPage';
 import { CursosPage } from './pages/CursosPage';
 import { BlogPage } from './pages/BlogPage';
-import { ContatoPage } from './pages/ContatoPage'; // <-- Importe
+import { BlogPostPage } from './pages/BlogPostPage';
+import { ContatoPage } from './pages/ContatoPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/reabilitacao" element={<ReabilitacaoPage />} />
           <Route path="/cursos-mentoria" element={<CursosPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contato" element={<ContatoPage />} />
         </Routes>
       </main>
