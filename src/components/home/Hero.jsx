@@ -1,6 +1,23 @@
 import { ArrowRight, Calendar, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/common/Container';
+import drFelipeHeroImage from '@/assets/images/dr-felipe-hero.jpg';
+import { AvatarCircles } from "@/components/ui/avatar-circles";
+
+const avatarUrls = [
+  {
+    imageUrl: "/avatars/avatar1.jpg",
+    profileUrl: "#"
+  },
+  {
+    imageUrl: "/avatars/avatar2.jpg", 
+    profileUrl: "#"
+  },
+  {
+    imageUrl: "/avatars/avatar3.jpg",
+    profileUrl: "#"
+  },
+];
 
 export function Hero() {
   return (
@@ -20,43 +37,42 @@ export function Hero() {
                 <Calendar className="mr-2 h-5 w-5" />
                 Agendar Consulta
               </Button>
-              <Button size="lg" variant="outline" className="text-lg bg-transparent border-white text-white hover:bg-white  hover:text-green-950">
+              <Button size="lg" variant="outline" className="text-lg bg-transparent border-white text-white hover:bg-white hover:text-brand-dark">
                 Conheça os Tratamentos
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
 
-          {/* Coluna da Imagem com ajustes para mobile */}
-          <div className="relative w-full h-[450px] md:h-[550px] flex justify-center items-center px-4 md:px-0">
-            {/* Placeholder da Imagem Principal */}
-            <div className="w-full h-full bg-slate-700 rounded-3xl flex items-center justify-center">
-              <p className="text-slate-400 text-center">FOTO DO DR. FELIPE BRASIL</p>
+          {/* Coluna da Imagem */}
+          <div className="relative w-full h-[700px] flex justify-center items-center">
+            <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={drFelipeHeroImage}
+                alt="Foto do Dr. Felipe Brasil, ortopedista especialista"
+                className="w-full h-full object-cover object-center" 
+              />
             </div>
 
-            {/* Badge de Reviews com ajustes para mobile */}
-            <div className="absolute top-12 -right-8 md:-right-8 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg flex items-center space-x-3 text-brand-dark animate-fade-in-up">
-              <div className="flex -space-x-3">
-                <div className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white"></div>
-                <div className="w-8 h-8 rounded-full bg-slate-300 border-2 border-white"></div>
-                <div className="w-8 h-8 rounded-full bg-slate-400 border-2 border-white"></div>
-              </div>
+            {/* Badge de Reviews */}
+            <div className="absolute top-4 right-4 md:top-12 md:-right-8 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg flex items-center space-x-3 text-brand-dark animate-fade-in-up">
+              {/* Ajuste de consistência no número */}
+              <AvatarCircles avatarUrls={avatarUrls} />
               <div>
                 <p className="font-bold">10k+</p>
                 <p className="text-xs text-slate-600">Avaliações Positivas</p>
               </div>
             </div>
 
-            {/* Badge de Cursos com ajustes para mobile */}
-            <div className="absolute bottom-8 -left-8 md:-left-8 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg text-brand-dark animate-fade-in-up flex items-center space-x-3" style={{ animationDelay: '0.2s' }}>
-              <BookOpen className="h-6 w-6 text-primary" />
+            {/* Badge de Cursos */}
+            <div className="absolute bottom-4 left-4 md:bottom-8 md:-left-8 bg-white/90 backdrop-blur-sm p-5 rounded-xl shadow-lg text-brand-dark animate-fade-in-up flex items-center space-x-4" style={{ animationDelay: '0.2s' }}>
+              <BookOpen className="h-6 w-6 text-primary flex-shrink-0" />
               <div>
                 <p className="font-semibold">Cursos & Mentoria</p>
                 <p className="text-xs text-slate-600">para profissionais da saúde</p>
               </div>
             </div>
           </div>
-
         </div>
       </Container>
     </section>
