@@ -13,7 +13,7 @@ export const AvatarCircles = ({
         <a
           key={index}
           href={url.profileUrl}
-          target="_blank"
+          target=""
           rel="noopener noreferrer">
           <img
             key={index}
