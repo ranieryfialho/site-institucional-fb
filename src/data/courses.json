@@ -2,26 +2,23 @@
   "courses": [
     {
       "audience": "Para Médicos",
-      "title": "Procedimentos Minimamente Invasivos Guiados por Imagem",
-      "description": "Aprenda na prática as técnicas mais avançadas de bloqueios, infiltrações e ortobiológicos para o tratamento da dor articular.",
-      "link": "#"
+      "title": "Joelho Expert",
+      "description": "Domine os 5 Passos para se tornar um Expert de Joelho e conquiste os melhores resultados e a fidelização de seus pacientes e alunos.",
+      "link": "https://joelhoexpert.com.br/",
+      "image": "/images/courses/joelho-expert.png"
     },
     {
       "audience": "Para Médicos",
-      "title": "Medicina Regenerativa na Prática Ortopédica",
-      "description": "Um curso aprofundado sobre a aplicação de BMA, PRP e outras terapias regenerativas para acelerar a recuperação de lesões.",
-      "link": "#"
-    },
-    {
-      "audience": "Para Fisioterapeutas",
-      "title": "Protocolos de Reabilitação Acelerada",
-      "description": "Domine os protocolos pós-operatórios e de tratamento conservador que integram tecnologia e terapia manual para resultados superiores.",
-      "link": "#"
+      "title": "Consultório Médico de Sucesso",
+      "description": "A metodologia prática e validada para médicos que querem sair da estagnação, otimizar a agenda e atender mais pacientes qualificados.",
+      "link": "https://consultoriomedicodesucesso.com.br/",
+      "image": "/images/courses/consultorio-sucesso.png"
     }
   ],
   "mentorship": {
     "title": "Mentoria Consultório de Sucesso",
     "description": "Uma mentoria individual para médicos que desejam ir além da técnica e aprender a gerir, escalar e transformar seu consultório em um negócio de alta performance. Abordamos gestão, finanças, marketing e liderança.",
-    "link": "#"
+    "link": "https://consultoriomedicodesucesso.com.br/",
+    "image": "/images/courses/consultorio-sucesso.png"
   }
 }
