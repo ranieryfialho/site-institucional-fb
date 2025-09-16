@@ -3,7 +3,7 @@ import { PageTransition } from "@/components/common/PageTransition";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from 'lucide-react';
-import { Link } from "react-router-dom";
+import reabilitacaoImage from '@/assets/images/paciente-reabilitado.JPG';
 
 const protocols = [
   {
@@ -21,6 +21,15 @@ const protocols = [
 ];
 
 export function ReabilitacaoPage() {
+  const WHATSAPP_NUMBER = "5585981191467"; // Número da página de contato
+
+  // Função para abrir o link do WhatsApp
+  const handleWhatsAppClick = () => {
+    const message = `Olá, Dr. Felipe. Gostaria de saber mais sobre a Reabilitação e iniciar minha jornada de recuperação.`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <PageTransition>
       <div className="bg-white">
@@ -35,8 +44,12 @@ export function ReabilitacaoPage() {
 
         <Container className="py-20 sm:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10 items-center">
-            <div className="w-full h-80 lg:h-96 bg-slate-200 rounded-2xl flex items-center justify-center">
-              <p className="text-slate-500">Foto de paciente em reabilitação</p>
+            <div className="w-full h-[40rem] lg:h-[40rem] rounded-2xl overflow-hidden">
+              <img
+                src={reabilitacaoImage}
+                alt="Paciente em sessão de reabilitação e fisioterapia"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-800">Recuperação Guiada pela Ciência</h2>
@@ -44,15 +57,16 @@ export function ReabilitacaoPage() {
                 Minha filosofia de reabilitação é baseada em um diagnóstico preciso e em um plano totalmente personalizado. Em colaboração com fisioterapeutas de elite, cada fase da sua recuperação é projetada para restaurar a força, a mobilidade e a confiança, minimizando o risco de novas lesões.
               </p>
               <div className="mt-8">
-                <Button asChild size="lg">
-                  <Link to="/contato">Inicie sua Jornada de Recuperação</Link>
+                {/* Botão agora chama a função do WhatsApp */}
+                <Button size="lg" onClick={handleWhatsAppClick}>
+                  Inicie sua Jornada de Recuperação
                 </Button>
               </div>
             </div>
           </div>
         </Container>
 
-        <div className="bg-primary-light">
+        <div className="bg-slate-50">
           <Container className="py-20 sm:py-28">
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold tracking-tight text-gray-800">Protocolos de Reabilitação</h2>
