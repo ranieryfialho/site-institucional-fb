@@ -8,6 +8,8 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import treatmentsData from '@/data/treatments.json';
 
+const WHATSAPP_NUMBER = '5585981191467'
+
 export function TratamentosPage() {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
 
@@ -17,6 +19,12 @@ export function TratamentosPage() {
 
   const closeModal = () => {
     setSelectedTreatment(null);
+  };
+
+   const handleWhatsAppClick = (treatmentName) => {
+    const message = `Olá, Dr. Felipe. Gostaria de saber mais sobre o tratamento: *${treatmentName}*.`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -45,11 +53,11 @@ export function TratamentosPage() {
 
             {treatmentsData.categories.map((category) => (
               <TabsContent key={category.id} value={category.id} className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {category.treatments.map((treatment) => (
-                    <Card key={treatment.name} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 aspect-[9/16] flex flex-col">
+                    <Card key={treatment.name} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-auto">
                       {/* Imagem do Tratamento */}
-                      <div className="relative h-2/3 bg-gradient-to-br from-gray-100 to-gray-200">
+                      <div className="relative h-[30rem] bg-gradient-to-br from-gray-100 to-gray-200">
                         {treatment.image && (
                           <img
                             src={treatment.image}
@@ -69,13 +77,13 @@ export function TratamentosPage() {
                         )}
                       </div>
 
-                      <CardContent className="p-4 flex-1 flex flex-col justify-between">
-                        <div>
+                      <CardContent className="p-4 flex-1 flex flex-col">
+                        <div className="flex-1">
                           <CardHeader className="p-0 mb-3">
-                            <CardTitle className="text-lg font-bold text-gray-800 mb-2 leading-tight">
+                            <CardTitle className="text-lg font-bold text-gray-800 mb-2 leading-tight line-clamp-2">
                               {treatment.name}
                             </CardTitle>
-                            <CardDescription className="text-gray-600 text-xs leading-relaxed line-clamp-3">
+                            <CardDescription className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                               {treatment.description}
                             </CardDescription>
                           </CardHeader>
@@ -97,7 +105,7 @@ export function TratamentosPage() {
 
                           {/* Informações Adicionais */}
                           {(treatment.duration || treatment.recovery) && (
-                            <div className="flex justify-between text-xs text-gray-500 mb-3">
+                            <div className="flex justify-between text-xs text-gray-500 mb-4">
                               {treatment.duration && (
                                 <span>⏱️ {treatment.duration}</span>
                               )}
@@ -109,18 +117,19 @@ export function TratamentosPage() {
                         </div>
 
                         {/* Botões de Ação */}
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 mt-4">
                           <Button
                             variant="outline"
                             size="sm"
-                            className="text-xs"
+                            className="text-sm py-2"
                             onClick={() => openModal(treatment)}
                           >
                             Saiba mais
                           </Button>
                           <Button
                             size="sm"
-                            className="bg-primary text-white hover:bg-green-900 text-xs font-semibold"
+                            className="bg-primary text-white hover:bg-green-900 text-sm font-semibold py-2"
+                            onClick={() => handleWhatsAppClick(treatment.name)}
                           >
                             Quero este tratamento
                           </Button>
@@ -153,7 +162,7 @@ export function TratamentosPage() {
 
               <div className="p-6 space-y-6">
                 {/* Imagem do Procedimento */}
-                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
+                <div className="relative h-64 sm:h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
                   {selectedTreatment.modalImage && (
                     <img
                       src={selectedTreatment.modalImage}
@@ -244,7 +253,7 @@ export function TratamentosPage() {
                 <div className="pt-4">
                   <Button
                     className="w-full bg-primary text-white hover:bg-green-900 py-3"
-                    onClick={closeModal}
+                    onClick={() => handleWhatsAppClick(selectedTreatment.name)}
                   >
                     Quero este tratamento
                   </Button>
