@@ -4,6 +4,8 @@ import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
+const LOGO_URL = '/images/logo-drFelipe.png';
+
 const navLinks = [
   { to: '/', label: 'Início' },
   { to: '/sobre', label: 'Sobre' },
@@ -25,6 +27,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-brand-dark/95 backdrop-blur-xl">
       <div className="container flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
+          <img src={LOGO_URL} alt="Logo Dr. Felipe Brasil" className="h-8 w-auto" />
           <span className="font-bold text-lg text-white">Dr. Felipe Brasil</span>
         </Link>
 

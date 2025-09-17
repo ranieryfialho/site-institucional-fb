@@ -75,13 +75,13 @@ export function ContatoPage() {
                 </p>
               </div>
               <div className="space-y-4 text-lg">
-                <a href="tel:+5585981191467" className="flex items-center gap-4 text-gray-800 hover:text-primary">
+                <a href="tel:+5585988881155" className="flex items-center gap-4 text-gray-800 hover:text-primary">
                   <Phone />
-                  <span>(85) 98119-1467</span>
+                  <span>(85) 98888-1155</span>
                 </a>
-                <a href="mailto:contato@drfelipebrasil.com" className="flex items-center gap-4 text-gray-800 hover:text-primary">
+                <a href="mailto:contato@felipebrasil.com" className="flex items-center gap-4 text-gray-800 hover:text-primary">
                   <Mail />
-                  <span>contato@drfelipebrasil.com</span>
+                  <span>contato@felipebrasil.com.br</span>
                 </a>
                 <div className="flex items-start gap-4 text-gray-800">
                   <MapPin className="mt-1 flex-shrink-0" />
@@ -115,7 +115,7 @@ export function ContatoPage() {
                 </div>
                 <div className="grid w-full items-center gap-1.5">
                   <Label htmlFor="phone">Telefone / WhatsApp</Label>
-                  <Input type="tel" id="phone" placeholder="(99) 99999-9999" value={formData.phone} onChange={handleChange} required />
+                  <Input type="tel" id="phone" placeholder="Seu melhor contato" value={formData.phone} onChange={handleChange} required />
                 </div>
                 <div className="grid w-full items-center gap-1.5">
                   <Label htmlFor="message">Mensagem</Label>

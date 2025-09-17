@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Container } from './Container';
 
-// Lista de links curta, como estava originalmente, mas com os caminhos corretos
+// Caminho para o seu logo
+const LOGO_URL = '/images/logo-drFelipe.png';
+
 const footerNavLinks = [
   { to: '/tratamentos', label: 'Tratamentos' },
   { to: '/cursos-mentoria', label: 'Cursos' },
@@ -16,7 +18,7 @@ const newsletterEndpoint = import.meta.env.VITE_FORMSPREE_NEWSLETTER_ENDPOINT;
 
 export function Footer() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [status, setStatus] = useState('idle');
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +47,10 @@ export function Footer() {
       <Container className="py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="space-y-4 md:col-span-2">
-            <h3 className="text-xl font-bold text-white">Dr. Felipe Brasil</h3>
+            <div className="flex items-center space-x-2">
+              <img src={LOGO_URL} alt="Logo Dr. Felipe Brasil" className="h-8 w-auto" />
+              <h3 className="text-xl font-bold text-white">Dr. Felipe Brasil</h3>
+            </div>
             <p className="text-sm text-slate-400">Tratamentos modernos e minimamente invasivos para dor e articulações.</p>
           </div>
 
@@ -67,10 +72,10 @@ export function Footer() {
             <p className="text-sm text-slate-400">Receba novidades sobre ortopedia e medicina regenerativa.</p>
             <form onSubmit={handleNewsletterSubmit} className="flex w-full max-w-sm items-start space-x-2">
               <div className="flex-grow">
-                <Input 
-                  type="email" 
-                  placeholder="Seu melhor e-mail" 
-                  className="bg-white border-slate-700 text-slate-900" 
+                <Input
+                  type="email"
+                  placeholder="Seu melhor e-mail"
+                  className="bg-white border-slate-700 text-slate-900"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
