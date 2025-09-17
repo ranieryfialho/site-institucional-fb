@@ -49,7 +49,7 @@
       "title": "Procedimentos de Neuromodulação",
       "treatments": [
         {
-          "name": "Radiofrequência",
+          "name": "Radioablação",
           "description": "Técnica que utiliza energia térmica para interromper os sinais de dor enviados por nervos específicos.",
           "image": "/images/treatments/radioablacao-equipamento.jpg",
           "modalImage": "/images/treatments/radioablacao-equipamento.jpg",
@@ -101,34 +101,64 @@
       "title": "Cirurgias Ortopédicas",
       "treatments": [
         {
-          "name": "Artroscopia",
-          "description": "Cirurgia minimamente invasiva para diagnóstico e tratamento de lesões articulares, como menisco e ligamentos.",
-          "image": "/images/treatments/artroscopia.jpg",
-          "modalImage": "/images/treatments/artroscopia.jpg",
-          "modalSubtitle": "Precisão cirúrgica com recuperação acelerada.",
-          "benefits": ["Minimamente invasiva", "Recuperação rápida"],
-          "duration": "60-90 min",
-          "recovery": "2-4 semanas"
-        },
-        {
-          "name": "Osteotomias",
-          "description": "Correção do alinhamento ósseo para redistribuir a carga na articulação e aliviar a pressão em áreas desgastadas.",
-          "image": "/images/treatments/osteotomias.jpg",
-          "modalImage": "/images/treatments/osteotomias.jpg",
-          "modalSubtitle": "Corrigindo o alinhamento para maior longevidade da articulação.",
-          "benefits": ["Correção definitiva", "Redistribui carga"],
+          "name": "Cirurgia de Cartilagem",
+          "description": "Reparação de lesões na cartilagem para restaurar a superfície da articulação e aliviar a dor.",
+          "image": "/images/treatments/cirurgia-cartilagem.jpg",
+          "modalImage": "/images/treatments/cirurgia-cartilagem.jpg",
+          "modalSubtitle": "Restaurando a superfície da articulação.",
+          "benefits": ["Reparação tecidual", "Alívio da dor"],
           "duration": "90-120 min",
           "recovery": "6-8 semanas"
         },
         {
-          "name": "Cirurgias Patelofemorais",
-          "description": "Procedimentos focados em corrigir instabilidades e dores relacionadas à patela (rótula).",
-          "image": "/images/treatments/patelofemorais.jpg",
-          "modalImage": "/images/treatments/patelofemorais.jpg",
-          "modalSubtitle": "Soluções para a estabilidade da patela.",
-          "benefits": ["Corrige instabilidade", "Específico patela"],
+          "name": "Cirurgia da Patela",
+          "description": "Procedimentos para corrigir instabilidades, luxações e dores relacionadas à patela (rótula).",
+          "image": "/images/treatments/cirurgia-patela.jpg",
+          "modalImage": "/images/treatments/cirurgia-patela.jpg",
+          "modalSubtitle": "Soluções para a estabilidade e dor patelar.",
+          "benefits": ["Corrige instabilidade", "Alívio da dor"],
           "duration": "60-90 min",
           "recovery": "4-6 semanas"
+        },
+        {
+          "name": "Cirurgia do LCA",
+          "description": "Reconstrução do Ligamento Cruzado Anterior para restaurar a estabilidade do joelho.",
+          "image": "/images/treatments/cirurgia-lca.jpg",
+          "modalImage": "/images/treatments/cirurgia-lca.jpg",
+          "modalSubtitle": "Restaurando a estabilidade para atletas e pacientes ativos.",
+          "benefits": ["Estabilidade", "Retorno ao esporte"],
+          "duration": "90 min",
+          "recovery": "6-9 meses"
+        },
+        {
+          "name": "Cirurgia do Menisco",
+          "description": "Reparo ou remoção parcial do menisco para aliviar dor, estalidos e travamento do joelho.",
+          "image": "/images/treatments/cirurgia-menisco.jpg",
+          "modalImage": "/images/treatments/cirurgia-menisco.jpg",
+          "modalSubtitle": "Tratamento de lesões meniscais por artroscopia.",
+          "benefits": ["Alívio de sintomas", "Preservação articular"],
+          "duration": "45-60 min",
+          "recovery": "4-6 semanas"
+        },
+        {
+          "name": "Osteotomia do Joelho",
+          "description": "Correção do alinhamento ósseo para redistribuir a carga e aliviar a pressão em áreas com artrose.",
+          "image": "/images/treatments/osteotomia-joelho.jpg",
+          "modalImage": "/images/treatments/osteotomia-joelho.jpg",
+          "modalSubtitle": "Corrigindo o alinhamento para maior longevidade da articulação.",
+          "benefits": ["Correção definitiva", "Adia prótese"],
+          "duration": "90-120 min",
+          "recovery": "8-12 semanas"
+        },
+        {
+          "name": "Prótese do Joelho",
+          "description": "Substituição da articulação desgastada por uma prótese, indicada para casos de artrose avançada.",
+          "image": "/images/treatments/protese-joelho.jpg",
+          "modalImage": "/images/treatments/protese-joelho.jpg",
+          "modalSubtitle": "Solução definitiva para a dor da artrose avançada.",
+          "benefits": ["Alívio da dor", "Qualidade de vida"],
+          "duration": "120 min",
+          "recovery": "3-6 meses"
         }
       ]
     }
