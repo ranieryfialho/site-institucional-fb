@@ -8,7 +8,8 @@ import drFelipeImage from '@/assets/images/dr-felipe.png';
 const MEDICO_SRC = drFelipeImage;
 const MEDICO_ALT = "Dr. Felipe Brasil — Ortopedista especialista em joelho";
 
-export function SobrePage() {
+// Remova o "export" daqui
+function SobrePage() {
   return (
     <PageTransition>
       <div className="bg-white min-h-screen flex items-center"> 
@@ -61,3 +62,4 @@ export function SobrePage() {
     </PageTransition>
   );
 }
+export default SobrePage;

@@ -7,10 +7,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin } from "lucide-react";
 
-// A variável agora é lida do ficheiro .env
 const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
-export function ContatoPage() {
+function ContatoPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,7 +31,6 @@ export function ContatoPage() {
     setSubmissionStatus('submitting');
 
     try {
-      // Usamos a variável lida do .env
       const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
@@ -134,3 +132,5 @@ export function ContatoPage() {
     </PageTransition>
   );
 }
+
+export default ContatoPage;

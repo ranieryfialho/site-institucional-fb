@@ -7,7 +7,8 @@ import { Faq } from '@/components/home/Faq';
 import { PageTransition } from '@/components/common/PageTransition';
 import { FadeIn } from '@/components/common/FadeIn';
 
-export function HomePage() {
+// Remova o "export" daqui
+function HomePage() {
   return (
     <PageTransition>
       <Hero />
@@ -34,3 +35,5 @@ export function HomePage() {
     </PageTransition>
   );
 }
+
+export default HomePage;

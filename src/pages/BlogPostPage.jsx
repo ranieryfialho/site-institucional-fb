@@ -5,7 +5,7 @@ import blogPostsData from '@/data/blog-posts.json';
 import { ArrowLeft } from 'lucide-react';
 import drFelipeImage from '@/assets/images/dr-felipe-hero.jpg';
 
-export function BlogPostPage() {
+function BlogPostPage() {
   const { slug } = useParams();
   const post = blogPostsData.find((p) => p.slug === slug);
 
@@ -75,3 +75,5 @@ export function BlogPostPage() {
     </PageTransition>
   );
 }
+
+export default BlogPostPage;

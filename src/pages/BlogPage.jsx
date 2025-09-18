@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import blogPostsData from '@/data/blog-posts.json';
 import { Link } from 'react-router-dom';
 
-export function BlogPage() {
+function BlogPage() {
   const allPosts = blogPostsData;
 
   return (
@@ -47,3 +47,5 @@ export function BlogPage() {
     </PageTransition>
   );
 }
+
+export default BlogPage;

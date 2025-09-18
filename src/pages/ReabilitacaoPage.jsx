@@ -20,8 +20,15 @@ const protocols = [
   }
 ];
 
-export function ReabilitacaoPage() {
-  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5585988881155&text=Ol%C3%A1%21+Vim+do+site+Institucional+do+Dr.+Felipe+Brasil+e+gostaria+de+agendar+uma+consulta&type=phone_number&app_absent=0";
+function ReabilitacaoPage() {
+  const WHATSAPP_NUMBER = "5585981191467"; // Número da página de contato
+
+  // Função para abrir o link do WhatsApp
+  const handleWhatsAppClick = () => {
+    const message = `Olá, Dr. Felipe. Gostaria de saber mais sobre a Reabilitação e iniciar minha jornada de recuperação.`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <PageTransition>
@@ -50,10 +57,9 @@ export function ReabilitacaoPage() {
                 Minha filosofia de reabilitação é baseada em um diagnóstico preciso e em um plano totalmente personalizado. Em colaboração com fisioterapeutas de elite, cada fase da sua recuperação é projetada para restaurar a força, a mobilidade e a confiança, minimizando o risco de novas lesões.
               </p>
               <div className="mt-8">
-                <Button asChild size="lg">
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    Inicie sua Jornada de Recuperação
-                  </a>
+                {/* Botão agora chama a função do WhatsApp */}
+                <Button size="lg" onClick={handleWhatsAppClick}>
+                  Inicie sua Jornada de Recuperação
                 </Button>
               </div>
             </div>
@@ -89,3 +95,5 @@ export function ReabilitacaoPage() {
     </PageTransition>
   );
 }
+
+export default ReabilitacaoPage;
