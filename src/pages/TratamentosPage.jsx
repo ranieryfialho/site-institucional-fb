@@ -8,7 +8,7 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import treatmentsData from '@/data/treatments.json';
 
-const WHATSAPP_NUMBER = '5585981191467'
+const whatsappUrl = "https://api.whatsapp.com/send/?phone=5585988881155&text=Ol%C3%A1%21+Vim+do+site+Institucional+do+Dr.+Felipe+Brasil+e+gostaria+de+agendar+uma+consulta&type=phone_number&app_absent=0";
 
 export function TratamentosPage() {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
@@ -19,12 +19,6 @@ export function TratamentosPage() {
 
   const closeModal = () => {
     setSelectedTreatment(null);
-  };
-
-   const handleWhatsAppClick = (treatmentName) => {
-    const message = `Olá, Dr. Felipe. Gostaria de saber mais sobre o tratamento: *${treatmentName}*.`;
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -127,11 +121,11 @@ export function TratamentosPage() {
                             Saiba mais
                           </Button>
                           <Button
+                            asChild
                             size="sm"
                             className="bg-primary text-white hover:bg-green-900 text-sm font-semibold py-2"
-                            onClick={() => handleWhatsAppClick(treatment.name)}
                           >
-                            Quero este tratamento
+                            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Quero este tratamento</a>
                           </Button>
                         </div>
                       </CardContent>
@@ -252,10 +246,10 @@ export function TratamentosPage() {
                 {/* Botão de Ação */}
                 <div className="pt-4">
                   <Button
+                    asChild
                     className="w-full bg-primary text-white hover:bg-green-900 py-3"
-                    onClick={() => handleWhatsAppClick(selectedTreatment.name)}
                   >
-                    Quero este tratamento
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Quero este tratamento</a>
                   </Button>
                 </div>
               </div>

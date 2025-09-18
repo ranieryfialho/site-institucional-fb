@@ -21,7 +21,7 @@ const avatarUrls = [
 ];
 
 export function Hero() {
-  const whatsappUrl = "https://wa.me/5585994326619?text=Olá!%20Vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5585988881155&text=Ol%C3%A1%21+Vim+do+site+Institucional+do+Dr.+Felipe+Brasil+e+gostaria+de+agendar+uma+consulta&type=phone_number&app_absent=0";
 
   return (
     <section className="bg-brand-dark text-white relative">

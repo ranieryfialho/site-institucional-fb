@@ -5,14 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import coursesData from "@/data/courses.json";
 
 export function CursosPage() {
-  const WHATSAPP_NUMBER = "5585981191467";
-
-  // Esta função será usada apenas pela mentoria agora
-  const handleWhatsAppClick = (courseName) => {
-    const message = `Olá, Dr. Felipe. Gostaria de saber mais sobre o curso/mentoria: *${coursename}*.`;
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=5585988881155&text=Ol%C3%A1%21+Vim+do+site+Institucional+do+Dr.+Felipe+Brasil+e+gostaria+de+agendar+uma+consulta&type=phone_number&app_absent=0";
 
   return (
     <PageTransition>
@@ -79,7 +72,7 @@ export function CursosPage() {
                   <p className="mt-6 text-lg text-slate-300">{coursesData.mentorship.description}</p>
                   <div className="mt-10">
                     <Button asChild size="lg" className="bg-white text-green-900 hover:bg-white/60 font-semibold">
-                      <a href={coursesData.mentorship.link} target="_blank" rel="noopener noreferrer">
+                      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                         Quero transformar meu consultório
                       </a>
                     </Button>
